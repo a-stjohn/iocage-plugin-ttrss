@@ -2,7 +2,7 @@
 
 # Enable the service
 sysrc -f /etc/rc.conf nginx_enable="YES"
-sysrc -f /etc/rc.conf php-fpm_enable="YES"
+sysrc -f /etc/rc.conf php_fpm_enable="YES"
 sysrc -f /etc/rc.conf mysql_enable="YES"
 
 
