@@ -4,7 +4,7 @@
 sysrc -f /etc/rc.conf nginx_enable="YES"
 sysrc -f /etc/rc.conf php_fpm_enable="YES"
 sysrc -f /etc/rc.conf postgresql_enable="YES"
-sysrc -f /etc/rc.conf ttrss_enable="YES"
+sysrc -f /etc/rc.conf ttrssd_enable="YES"
 
 # Start the service
 service postgresql initdb
@@ -43,7 +43,7 @@ service postgresql restart
 # Start the service
 service php-fpm start 2>/dev/null
 service nginx start 2>/dev/null
-service ttrss start 2>/dev/null
+service ttrssd start 2>/dev/null
 
 echo "Database Name: $DB"
 echo "Database User: $USER"
