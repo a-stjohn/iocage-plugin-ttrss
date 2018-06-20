@@ -36,9 +36,11 @@ psql -U pgsql -d ${DB} -c "CREATE EXTENSION IF NOT EXISTS pg_trgm;"
 echo "listen_addresses = '*'" >> /usr/local/pgsql/data/postgresql.conf
 echo "host  all  all 0.0.0.0/0 md5" >> /usr/local/pgsql/data/pg_hba.conf
 
+#Workaround for permission issue
+chmod 755 /usr/local/etc/rc.d/ttrssd
+
 # Restart postgresql after config change
 service postgresql restart
-
 
 # Start the service
 service php-fpm start 2>/dev/null
